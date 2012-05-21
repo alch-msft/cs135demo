@@ -1,0 +1,22 @@
+<%= form_for(user) do |f| %>
+
+
+  <td class="field">
+    <%= f.label :firstname %><br />
+    <%= f.text_field :firstname %>
+  </td>
+  <td class="field">
+    <%= f.label :lastname %><br />
+    <%= f.text_field :lastname %>
+  </td>
+  <td class="field">
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </td>
+  <td class="actions">
+    <%= f.submit %>
+  </td>
+  <% if detelable then%>
+  <td><%= link_to 'Destroy', user, confirm: 'Are you sure?', method: :delete %></td>
+  <% end %>
+<% end %>

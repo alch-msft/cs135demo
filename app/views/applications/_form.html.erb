@@ -1,0 +1,19 @@
+<%= form_for(application) do |f| %>
+
+
+  <td class="field">
+    <%= f.label :first_name %><br />
+    <%= f.text_field :first_name %>
+  </td>
+  <td class="field">
+    <%= f.label :last_name %><br />
+    <%= f.text_field :last_name %>
+  </td>
+ 
+  <td class="actions">
+    <%= f.submit %>
+  </td>
+  <% if detelable then%>
+  <td><%= link_to 'Destroy', application, confirm: 'Are you sure?', method: :delete %></td>
+  <% end %>
+<% end %>
