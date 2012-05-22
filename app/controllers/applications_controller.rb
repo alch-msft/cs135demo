@@ -2,7 +2,7 @@ class ApplicationsController < ApplicationController
   # GET /applications
   # GET /applications.json
   def index
-    @applications = Application.all
+    @applications = Application.find(:all, :order => "a_id")
     @new_application = Application.new
 
     respond_to do |format|
